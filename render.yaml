@@ -1,0 +1,10 @@
+
+# Render service configuration - Node web service
+services:
+  - type: web
+    name: defire-backend
+    env: node
+    plan: free
+    branch: main
+    buildCommand: 'npm install'
+    startCommand: 'npm start'
