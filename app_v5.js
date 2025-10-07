@@ -3,7 +3,7 @@
 // Connects TronLink, signs a challenge, then calls backend to verify and fetch prices/portfolio.
 // Backend assumed at BACKEND_URL (replace with deployed Render URL or local localhost:8899)
 
-const BACKEND_URL = localStorage.getItem('defire_backend') || 'https://your-backend.example.com'; // update after deploy
+const BACKEND_URL = localStorage.getItem('defire_backend') || 'https://defire.onrender.com'; // update after deploy
 
 const OWNER_WALLET = "TY691Xr2EWgKJmHfm7NWKMRJjojLmS2cma";
 const FBA_CONTRACT = "TNW5ABkp3v4jfeDo1vRVjxa3gtnoxP3DBN";
