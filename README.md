@@ -6,7 +6,7 @@ Structure:
 - backend/    (Node/Express server to deploy on Render)
 
 Quick deploy backend to Render:
-1. Push the repo to GitHub under your account (theRunnerz/-calculator-).
+1. Push the repo to GitHub under your account (theRunnerz/Defire).
 2. In Render, create a new Web Service, connect the repo, choose the 'backend' folder as the root, and Render will auto-deploy.
 3. After deployment, copy the backend URL (e.g., https://defire-backend.onrender.com) and set it in browser localStorage:
    - Open console and run: localStorage.setItem('defire_backend', 'https://defire-backend.onrender.com')
