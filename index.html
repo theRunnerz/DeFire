@@ -3,80 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>🔥 DeFire</title>
+  <title>DeFire – Tron Portfolio Tracker 👽🔥</title>
   <link rel="icon" href="./favicon.png">
   <link rel="stylesheet" href="./style.css">
+  <!-- React + ReactDOM + Babel for JSX in-browser (simple dev/demo approach) -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
+<body>
+  <div id="root"></div>
 
-<body data-theme="dark">
-  <!-- 🔥 Fire crackle audio -->
-  <audio id="fireSound" src="./sounds/fire-crackle.mp3" preload="auto" loop></audio>
+  <!-- media -->
+  <video id="bgVideo" autoplay loop muted playsinline style="display:none;">
+    <source src="./media/fire.mp4" type="video/mp4" />
+  </video>
+  <audio id="fireAudio" loop preload="auto" src="./media/fire.mp3"></audio>
 
-  <!-- 🔥 Mobile Nav -->
-  <nav class="navbar">
-    <div class="logo">🔥 DeFire</div>
-    <div class="nav-links">
-      <button id="themeToggle">🌙</button>
-      <button id="soundToggle">🔈</button>
-      <button id="walletConnect">Connect Wallet</button>
-    </div>
-  </nav>
+  <!-- TronWeb from CDN (fallback) -->
+  <script src="https://unpkg.com/tronweb@4.1.0/dist/TronWeb.js"></script>
 
-  <!-- 🔥 Tabs -->
-  <div class="tabs">
-    <button class="tab-button active" data-tab="calculator">🔥 Calculator</button>
-    <button class="tab-button" data-tab="portfolio">💰 Portfolio</button>
-    <button class="tab-button" data-tab="settings">⚙️ Settings</button>
-  </div>
-
-  <!-- 🔥 Calculator -->
-  <div id="calculator" class="tab-content active">
-    <h2>DeFire Calculator</h2>
-    <label>Yearly Expenses ($):</label>
-    <input id="expenses" type="number" placeholder="Enter yearly expenses">
-
-    <label>Current Savings ($):</label>
-    <input id="savings" type="number" placeholder="Enter savings">
-
-    <label>Yearly Savings ($):</label>
-    <input id="yearlySavings" type="number" placeholder="Enter yearly savings">
-
-    <label>Expected APY (%):</label>
-    <input id="apy" type="number" placeholder="e.g. 10">
-
-    <button id="calculateBtn">🔥 Calculate</button>
-
-    <h3 id="fireResult">Your FIRE timeline will appear here</h3>
-  </div>
-
-  <!-- 💰 Portfolio -->
-  <div id="portfolio" class="tab-content">
-    <h2>Net Worth Tracker</h2>
-    <p>Connected Wallet: <span id="walletAddress">Not connected</span></p>
-    <p>FBA Balance: <span id="fbaBalance">0</span></p>
-
-    <div id="walletInputContainer">
-      <input id="walletInput" placeholder="Add another TRON wallet address">
-      <button id="addWalletBtn">➕ Add</button>
-    </div>
-
-    <div id="walletList"></div>
-    <h3>Total Portfolio Value: <span id="totalValue">$0.00</span></h3>
-  </div>
-
-  <!-- ⚙️ Settings -->
-  <div id="settings" class="tab-content">
-    <h2>Settings</h2>
-    <p>Switch theme, toggle sound, or manage preferences here.</p>
-  </div>
-
-  <!-- Loading -->
-  <div id="loading" class="loading" style="display:none;">
-    <div class="loader"></div>
-    <div class="loading-text">Fetching portfolio...</div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/tronweb@4.1.0/dist/TronWeb.js"></script>
-  <script src="./app_v5.js"></script>
+  <!-- App (JSX via Babel) -->
+  <script type="text/babel" src="./app-frontend.js"></script>
 </body>
 </html>
