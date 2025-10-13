@@ -1,5 +1,3 @@
-
-# Render service configuration - Node web service
 services:
   - type: web
     name: defire-backend
