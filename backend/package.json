@@ -1,15 +1,15 @@
 {
-  "name": "defire-backend",
-  "version": "1.0.0",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "axios": "^1.4.0",
-    "body-parser": "^1.20.2",
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "tronweb": "^4.1.0"
-  }
+   "name": "defire-backend-v6",
+   "version": "1.0.0",
+   "main": "server.js",
+   "scripts": {
+      "start": "node server.js"
+   },
+   "dependencies": {
+      "express": "^4.18.2",
+      "axios": "^1.4.0",
+      "cors": "^2.8.5",
+      "body-parser": "^1.20.2",
+      "tronweb": "^4.1.0"
+   }
 }
